@@ -1,0 +1,1036 @@
+/* 
+    Document   : Layout
+    Author     : Kanthan
+    Description: Purpose of the stylesheet follows.
+*/
+
+/* ========== Imported Styles  ========================================= */
+@import url("screen.css");/*For Printing and other devices*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600italic,600,700italic);
+/*font-family: 'Open Sans', Arial, Helvetica Neue, Helvetica, sans-serif;*/
+
+/* ========== HTML5 Boilerplate  ========================================= */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+audio,
+canvas,
+video {
+	display: inline-block;
+*display: inline;
+*zoom: 1;
+}
+audio:not([controls]) {
+	display: none;
+}
+[hidden] {
+display: none;
+}
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	height: 100%;
+	background: #003276;
+	background: -moz-linear-gradient(top, #003276 0%, #04b7dc 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #003276), color-stop(100%, #04b7dc));
+	background: -webkit-linear-gradient(top, #003276 0%, #04b7dc 100%);
+	background: -o-linear-gradient(top, #003276 0%, #04b7dc 100%);
+	background: -ms-linear-gradient(top, #003276 0%, #04b7dc 100%);
+	background: linear-gradient(to bottom, #003276 0%, #04b7dc 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003276', endColorstr='#04b7dc', GradientType=0 );
+	-webkit-font-smoothing: antialiased;
+}
+html,
+button,
+input,
+select,
+textarea {
+	font-family: 'Lato', sans-serif;
+	color: #222;
+}
+body {
+	margin: 0;
+	font-size: 87.5%;
+	line-height: 1.4;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+::-moz-selection {
+background: #0575C1;
+color: #fff;
+text-shadow: none;
+}
+::selection {
+	background: #0575C1;
+	color: #fff;
+	text-shadow: none;
+}
+a {
+	color: #00e;
+}
+a:visited {
+	color: #551a8b;
+}
+a:hover {
+	color: #06e;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b,
+strong {
+	font-weight: bold;
+}
+blockquote {
+	margin: 1em 40px;
+}
+dfn {
+	font-style: italic;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+ins {
+	background: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+mark {
+	background: #ff0;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, serif;
+	_font-family: 'courier new', monospace;
+	font-size: 1em;
+}
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	color: #111;
+}
+h1 {
+	font-size: 3em;
+	line-height: 1;
+	margin-bottom: 0.5em;
+}
+h2 {
+	font-size: 2em;
+	margin-bottom: 0.75em;
+}
+h3 {
+	font-size: 1.5em;
+	line-height: 1;
+	margin-bottom: 1em;
+}
+h4 {
+	font-size: 1.2em;
+	line-height: 1.25;
+	margin-bottom: 1.25em;
+}
+h5 {
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 1.5em;
+}
+h6 {
+	font-size: 1em;
+	font-weight: bold;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img {
+	margin: 0;
+}
+p {
+	margin: 0 0 1.5em;
+}
+p img.left {
+	float: left;
+	margin: 1.5em 1.5em 1.5em 0;
+	padding: 0;
+}
+p img.right {
+	float: right;
+	margin: 1.5em 0 1.5em 1.5em;
+}
+q {
+	quotes: none;
+}
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+small {
+	font-size: 85%;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+ul,
+ol {
+	margin: 1em 0;
+	padding: 0 0 0 40px;
+}
+dd {
+	margin: 0 0 0 40px;
+}
+li ul,
+li ol {
+	margin: 0 1.5em;
+}
+ul {
+	list-style-type: disc;
+}
+ol {
+	list-style-type: decimal;
+}
+dl {
+	margin: 0 0 1.5em 0;
+}
+dl dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: 1.5em;
+}
+nav ul,
+nav ol {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 0;
+}
+form {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+label {
+	cursor: pointer;
+}
+legend {
+	border: 0;
+*margin-left: -7px;
+	padding: 0;
+	white-space: normal;
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+*vertical-align: middle;
+}
+button,
+input {
+	line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+*overflow: visible;
+}
+button[disabled],
+input[disabled] {
+	cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+*width: 13px;
+*height: 13px;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+-webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
+input:valid, textarea:valid {
+}
+input:invalid, textarea:invalid {
+background-color: #f0dddd;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 1.4em;
+	width: 100%;
+}
+td {
+	vertical-align: top;
+}
+th {
+	font-weight: bold;
+}
+thead th {
+	background: #c3d9ff;
+}
+th,
+td,
+caption {
+	padding: 4px 10px 4px 5px;
+}
+tr.even td {
+	background: #e5ecf9;
+}
+tfoot {
+	font-style: italic;
+}
+caption {
+	background: #eee;
+}
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: black;
+	padding: 0.2em 0;
+}
+/* ============Non-semantic helper classes ========================================== */
+.ir {
+	display: block;
+	border: 0;
+	text-indent: -999em;
+	overflow: hidden;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+*line-height: 0;
+}
+.ir br {
+	display: none;
+}
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+.invisible {
+	visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+*zoom: 1;
+}
+.wrapper:before,
+.wrapper:after {
+	content: "";
+	display: table;
+}
+.wrapper:after {
+	clear: both;
+}
+.wrapper {
+*zoom: 1;
+}
+.small {
+	font-size: .8em;
+	margin-bottom: 1.875em;
+	line-height: 1.875em;
+}
+.large {
+	font-size: 1.2em;
+	line-height: 2.5em;
+	margin-bottom: 1.25em;
+}
+.hide {
+	display: none;
+}
+.quiet {
+	color: #666;
+}
+.loud {
+	color: #000;
+}
+.highlight {
+	background: #ff0;
+}
+.added {
+	background: #060;
+	color: #fff;
+}
+.removed {
+	background: #900;
+	color: #fff;
+}
+.first {
+	margin-left: 0;
+	padding-left: 0;
+}
+.last {
+	margin-right: 0;
+	padding-right: 0;
+}
+.top {
+	margin-top: 0;
+	padding-top: 0;
+}
+.bottom {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.text_center {
+	text-align: center;
+}
+.text_right {
+	text-align: right;
+}
+.text_justify {
+	text-align: justify;
+}
+.red {
+	color: #cc0101;
+}
+/* ========Layout========== */
+body {
+	background: url(../img/bg-pattern.png) repeat;
+}
+.wrapper {
+	background: url(../img/bg.png) no-repeat center;
+	height: 100%;
+	margin: auto;
+	width: 100%;
+}
+.main-part {
+	margin: auto;
+	width: 380px;
+}
+.main-part h1 {
+	background: url(../img/logo.png) no-repeat;
+	width: 250px;
+	height: 65px;
+	margin: 200px auto 30px;
+	padding: 0;
+}
+.login-part {
+	background: #dbdbdb;
+	width: 324px;
+	margin: auto;
+	border-radius: 10px 10px 30px 30px;
+	box-shadow: 0 0 20px rgba(18, 47, 82, 0.7);
+}
+.login-part h2 {
+	border-radius: 10px 10px 0 0;
+	color: #001237;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 17px 0;
+	margin: 0;
+	text-align: center;
+	text-shadow: 1px 1px 0 #FFFFFF;
+	text-transform: uppercase;
+	border-bottom: 1px solid #fff;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #c7c6c6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #c7c6c6));
+	background: -webkit-linear-gradient(top, #ffffff 0%, #c7c6c6 100%);
+	background: -o-linear-gradient(top, #ffffff 0%, #c7c6c6 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%, #c7c6c6 100%);
+	background: linear-gradient(to bottom, #ffffff 0%, #c7c6c6 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7c6c6', GradientType=0 );
+}
+.login-part p.user-name {
+	background: #E6E6E6;
+	color: #035091;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 5px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.login-part p.user-name span {
+	color: #001132;
+	padding-left: 6px;
+}
+.view-att {
+	background: #cccbcb;
+	border-radius: 0;
+	border-top: 1px solid #dbdbdb;
+	padding-top: 15px;
+	box-shadow: 0 -1px 0 #CCCBCB;
+	-moz-box-shadow: 0 -1px 0 #CCCBCB;
+	-webkit-box-shadow: 0 -1px 0 #CCCBCB;
+}
+.cal-icon,
+.clock-icon {
+	color: #00163d;
+	font-size: 16px;
+	font-weight: 600;
+	padding-left: 35px;
+	height: 28px;
+	line-height:28px
+}
+.cal-icon {
+	background: url(../img/cal-icon.png) no-repeat;
+	float: left;
+	margin-left: 15px;
+}
+.clock-icon {
+	background: url(../img/clock-icon.png) no-repeat;
+	float: right;
+	margin-right: 15px;
+}
+.view-att-btn {
+	border-radius: 30px;
+	display: block;
+	margin-bottom: -22px;
+	margin-top: 10px;
+	padding: 4px;
+	background: #b1b1b1;
+	background: -moz-linear-gradient(top, #b1b1b1 0%, #e6e6e6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b1b1b1), color-stop(100%, #e6e6e6));
+	background: -webkit-linear-gradient(top, #b1b1b1 0%, #e6e6e6 100%);
+	background: -o-linear-gradient(top, #b1b1b1 0%, #e6e6e6 100%);
+	background: -ms-linear-gradient(top, #b1b1b1 0%, #e6e6e6 100%);
+	background: linear-gradient(to bottom, #b1b1b1 0%, #e6e6e6 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1b1b1', endColorstr='#e6e6e6', GradientType=0 );
+}
+.view-att-btn input {
+	background: rgb(238,238,238);
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(209,209,209,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(238,238,238,1)), color-stop(100%, rgba(209,209,209,1)));
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(209,209,209,1) 100%);
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(209,209,209,1) 100%);
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(209,209,209,1) 100%);
+	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%, rgba(209,209,209,1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#d1d1d1', GradientType=0 );
+	background: linear-gradient(to bottom, #EEEEEE 0%, #D1D1D1 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: 0 none;
+	border-radius: 30px;
+	display: block;
+	padding: 8px;
+	width: 316px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #0360ac;
+	text-shadow: 0px 1px 0 #fff;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.cont-part {
+	background: #c2c2c2;
+	background: -moz-linear-gradient(top, #c2c2c2 32%, #e8e8e8 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(32%, #c2c2c2), color-stop(100%, #e8e8e8));
+	background: -webkit-linear-gradient(top, #c2c2c2 32%, #e8e8e8 100%);
+	background: -o-linear-gradient(top, #c2c2c2 32%, #e8e8e8 100%);
+	background: -ms-linear-gradient(top, #c2c2c2 32%, #e8e8e8 100%);
+	background: linear-gradient(to bottom, #c2c2c2 32%, #e8e8e8 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2c2c2', endColorstr='#e8e8e8', GradientType=0 );
+	box-shadow: 0px 1px 2px rgba(0,0,0,.1);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,.1);
+	width: 150px;
+	margin: 20px auto;
+	border-radius: 30px;
+	padding: 6px;
+	min-height:46px;
+}
+.submit-btn {
+	background: #247fc9;
+	background: -moz-linear-gradient(top, #247fc9 0%, #035ba0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #247fc9), color-stop(100%, #035ba0));
+	background: -webkit-linear-gradient(top, #247fc9 0%, #035ba0 100%);
+	background: -o-linear-gradient(top, #247fc9 0%, #035ba0 100%);
+	background: -ms-linear-gradient(top, #247fc9 0%, #035ba0 100%);
+	background: linear-gradient(to bottom, #247fc9 0%, #035ba0 100%);
+ 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#247fc9', endColorstr='#035ba0', GradientType=0 );
+	background: linear-gradient(to bottom, #247FC9 0%, #035BA0 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: 0 none;
+	border-radius: 30px;
+	color: #DCDCDC;
+	font-size: 24px;
+	font-weight: 600;
+	padding: 8px 26px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;	
+	width:100%;
+}
+.submit-btn:hover {
+	background: #3989c6;
+	background: -moz-linear-gradient(top, #3989c6 0%, #0c5f9e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3989c6), color-stop(100%, #0c5f9e));
+	background: -webkit-linear-gradient(top, #3989c6 0%, #0c5f9e 100%);
+	background: -o-linear-gradient(top, #3989c6 0%, #0c5f9e 100%);
+	background: -ms-linear-gradient(top, #3989c6 0%, #0c5f9e 100%);
+	background: linear-gradient(to bottom, #3989c6 0%, #0c5f9e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3989c6', endColorstr='#0c5f9e', GradientType=0 );
+}
+
+
+/*
+ * CSS TOGGLE SWITCHES
+*/
+.switch-light {
+	display: block;
+	height: 30px;
+	/* Outline the toggles when the inputs are focused
+	 */
+	position: relative;
+	overflow: visible;
+	padding: 0;
+}
+.switch-light * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.switch-light a {
+	display: block;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.switch-light label,
+.switch-light > span {
+	line-height: 30px;
+	vertical-align: middle;
+}
+.switch-light input:focus ~ a,
+.switch-light input:focus + label {
+	outline:0;
+}
+.switch-light label {
+	position: relative;
+	z-index: 3;
+	display: block;
+	width: 100%;
+}
+.switch-light input {
+	position: absolute;
+	opacity: 0;
+	z-index: 5;
+}
+.switch-light input:checked ~ a {
+	right: 0%;
+}
+.switch-light > span {
+	position: absolute;
+	left: -100px;
+	width: 100%;
+	margin: 0;
+	padding-right: 100px;
+	text-align: left;
+	height:46px;
+}
+
+.switch-ios.switch-light input:checked ~ span:before {   
+    background: #33ccff;
+	background: -moz-linear-gradient(top,  #33ccff 0%, #3399ff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#33ccff), color-stop(100%,#3399ff));
+	background: -webkit-linear-gradient(top,  #33ccff 0%,#3399ff 100%);
+	background: -o-linear-gradient(top,  #33ccff 0%,#3399ff 100%);
+	background: -ms-linear-gradient(top,  #33ccff 0%,#3399ff 100%);
+	background: linear-gradient(to bottom,  #33ccff 0%,#3399ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ccff', endColorstr='#3399ff',GradientType=0 );
+	
+	box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3) inset;
+	-webkit-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3) inset;
+}
+.switch-light > span span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color:#fff;
+	z-index: 5;
+	display: block;
+	width: 50%;
+	margin-left: 100px;
+	text-align: center;
+	font-size:20px;
+	text-transform:uppercase;
+	font-family: 'Lato', sans-serif;
+	font-weight:800;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.5);
+	line-height:46px;
+}
+.switch-light > span span:last-child {
+	left: 50%;
+}
+.switch-light a {
+	position: absolute;
+	right: 50%;
+	top: -6px;
+	z-index: 4;
+	display: block;
+	width: 50%;
+	height: 100%;
+	padding: 0;
+}
+.switch-toggle {
+	display: block;
+	height: 30px;
+	/* Outline the toggles when the inputs are focused
+	 */
+	position: relative;
+	/* For callout panels in foundation
+	 */
+	padding: 0 !important;
+/* Generate styles for the multiple states */ }
+.switch-toggle * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.switch-toggle a {
+	display: block;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.switch-toggle label,
+.switch-toggle > span {
+	line-height: 30px;
+	vertical-align: middle;
+}
+.switch-toggle input:focus ~ a,
+.switch-toggle input:focus + label {
+	outline: 0;
+}
+.switch-toggle input {
+	position: absolute;
+	opacity: 0;
+}
+.switch-toggle input + label {
+	position: relative;
+	z-index: 2;
+	float: left;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+}
+.switch-toggle a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	z-index: 1;
+	width: 50%;
+	height: 100%;
+}
+.switch-toggle input:last-of-type:checked ~ a {
+	left: 50%;
+}
+.switch-toggle.switch-3 label,
+.switch-toggle.switch-3 a {
+	width: 33.33333%;
+}
+.switch-toggle.switch-3 input:checked:nth-of-type(2) ~ a {
+	left: 33.33333%;
+}
+.switch-toggle.switch-3 input:checked:last-of-type ~ a {
+	left: 66.66667%;
+}
+.switch-toggle.switch-4 label,
+.switch-toggle.switch-4 a {
+	width: 25%;
+}
+.switch-toggle.switch-4 input:checked:nth-of-type(2) ~ a {
+	left: 25%;
+}
+.switch-toggle.switch-4 input:checked:nth-of-type(3) ~ a {
+	left: 50%;
+}
+.switch-toggle.switch-4 input:checked:last-of-type ~ a {
+	left: 75%;
+}
+.switch-toggle.switch-5 label,
+.switch-toggle.switch-5 a {
+	width: 20%;
+}
+.switch-toggle.switch-5 input:checked:nth-of-type(2) ~ a {
+	left: 20%;
+}
+.switch-toggle.switch-5 input:checked:nth-of-type(3) ~ a {
+	left: 40%;
+}
+.switch-toggle.switch-5 input:checked:nth-of-type(4) ~ a {
+	left: 60%;
+}
+.switch-toggle.switch-5 input:checked:last-of-type ~ a {
+	left: 80%;
+}
+.switch-candy {
+	background-color: #2d3035;
+	border-radius: 3px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 1px #191b1e;
+	box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(255, 255, 255, 0.2);
+}
+.switch-candy label {
+	color: white;
+	-webkit-transition: color 0.2s ease-out;
+	-moz-transition: color 0.2s ease-out;
+	transition: color 0.2s ease-out;
+}
+.switch-candy input:checked + label {
+	color: #333333;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.switch-candy a {
+	border: 1px solid #333333;
+	background-color: #70c66b;
+	border-radius: 3px;
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+.switch-candy > span {
+	color: #333333;
+	text-shadow: none;
+}
+.switch-candy span {
+	color: white;
+}
+.switch-candy.switch-candy-blue a {
+	background-color: #38a3d4;
+}
+.switch-candy.switch-candy-yellow a {
+	background-color: #f5e560;
+}
+.switch-android {
+	background-color: #464747;
+	border-radius: 1px;
+	color: white;
+	box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;/* Selected ON switch-light
+		 */ }
+.switch-android label {
+	color: white;
+}
+.switch-android > span span {
+	opacity: 0;
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
+}
+.switch-android > span span:first-of-type {
+	opacity: 1;
+}
+
+.switch-android a {
+	background-color: #666666;
+	border-radius: 1px;
+	box-shadow: inset rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.3) 0 -1px 0;
+}
+.switch-android.switch-light input:checked ~ a {
+	background-color: #0e88b1;
+}
+.switch-android.switch-light input:checked ~ span span:first-of-type {
+	opacity: 0;
+}
+.switch-android.switch-light input:checked ~ span span:last-of-type {
+	opacity: 1;
+}
+.switch-android.switch-toggle,
+.switch-android > span span {
+	font-size: 85%;
+	text-transform: uppercase;
+}
+.switch-ios.switch-light {
+	color: #868686;
+}
+.switch-ios.switch-light a {
+	left: -6px;
+	width: 100px;
+	height:61px;	
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	background:url(../img/hover-btn.png) no-repeat;
+	
+}
+.switch-ios.switch-light > span span {
+	width: 100%;
+	left: 0;
+	opacity: 0;
+}
+.switch-ios.switch-light > span span:first-of-type {
+	opacity: 1;
+	padding-left: 84px;
+}
+.switch-ios.switch-light > span span:last-of-type {
+	padding-right: 80px;
+}
+.switch-ios.switch-light > span:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 100px;
+	top: 0;	
+	border-radius: 30px;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	background: #db1b1c;
+	background: -moz-linear-gradient(top,  #db1b1c 0%, #900000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#db1b1c), color-stop(100%,#900000));
+	background: -webkit-linear-gradient(top,  #db1b1c 0%,#900000 100%);
+	background: -o-linear-gradient(top,  #db1b1c 0%,#900000 100%);
+	background: -ms-linear-gradient(top,  #db1b1c 0%,#900000 100%);
+	background: linear-gradient(to bottom,  #db1b1c 0%,#900000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db1b1c', endColorstr='#900000',GradientType=0 );
+	
+}
+.switch-ios.switch-light input:checked ~ a {
+	left: 100%;
+	margin-left: -90px;
+}
+
+.switch-ios.switch-light input:checked ~ span span:first-of-type {
+	opacity: 0;
+}
+.switch-ios.switch-light input:checked ~ span span:last-of-type {
+	opacity: 1;
+	color: white;
+	font-size:25px;
+}
+.switch-ios.switch-toggle {
+	background-color: #fafafa;
+	border: 1px solid lightgrey;
+	border-radius: 30px;
+	box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+}
+.switch-ios.switch-toggle a {
+	background-color: #53d76a;
+	border-radius: 25px;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.switch-ios.switch-toggle label {
+	color: #868686;
+}
+.switch-ios input:checked + label {
+	color: #3a3a3a;
+}
+
+@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: 1280px) {
+.switch-light,
+.switch-toggle {
+	-webkit-animation: webkitSiblingBugfix infinite 1s;
+}
+}
+ @-webkit-keyframes webkitSiblingBugfix {
+ from {
+ -webkit-transform: translate3d(0, 0, 0);
+}
+to {
+	-webkit-transform: translate3d(0, 0, 0);
+}
+}
